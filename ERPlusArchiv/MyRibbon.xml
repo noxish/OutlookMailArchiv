@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
+  <ribbon>
+    <tabs>
+		<tab idMso="TabAddIns">
+			<group id="ContentGroup" label="ERPlus Dokumentmanagement">
+				<button id="Testsss" label="An ERPlus Dokumentmanagement senden"
+					 screentip="Export Email" onAction="OnEmailExportButton"
+					 supertip="Exportiert markierte Emails nach ERPlus Dokumentmanagement" />
+				
+				<button id="textButton" label="An ERPlus Dokumentmanagement senden"
+					screentip="Export Email" onAction="OnEmailExportButton"
+					supertip="Exportiert markierte Emails nach ERPlus Dokumentmanagement" />
+			</group>
+		</tab>
+    </tabs>
+  </ribbon>
+	<contextMenus>
+		<contextMenu idMso="ContextMenuMailItem">
+			<button id="SingleEmail" label="Mail an ERPlus DMS senden" insertBeforeMso="HyperlinkInsert" onAction="OnEmailExportButton" />
+		</contextMenu>
+		<contextMenu idMso="ContextMenuMultipleItems">
+			<button id="MultiEmail" label="Mails an ERPlus DMS senden" insertBeforeMso="HyperlinkInsert" onAction="OnEmailExportButton" />
+		</contextMenu>
+		<contextMenu idMso="ContextMenuAttachments">
+			<button id="SingleAttachment" label="Anhang ERPlus DMS senden" insertBeforeMso="HyperlinkInsert" onAction="OnAttachmentExportButton" />
+			<button id="MultiAttachment" label="Alle Anhänge ERPlus DMS senden" insertBeforeMso="HyperlinkInsert" onAction="OnAttachmentExportAllButton" />
+		</contextMenu>
+	</contextMenus>
+</customUI>
+
